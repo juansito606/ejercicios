@@ -10,10 +10,10 @@ public class inventario2 {
         producto1.precio = 500;
 
 
-        producto1.nombreProducto = "Pera";
-        producto1.codigo = "456";
-        producto1.cantidadStock = 6;
-        producto1.precio = 800;
+        producto2.nombreProducto = "Pera";
+        producto2.codigo = "456";
+        producto2.cantidadStock = 6;
+        producto2.precio = 800;
 
 
         producto1.masStock(2);
@@ -32,4 +32,3 @@ public class inventario2 {
     }
     
 }
-;

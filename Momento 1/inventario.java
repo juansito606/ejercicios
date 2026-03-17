@@ -26,8 +26,8 @@ public class inventario {
     //metodo calcular inventario 
 
     public void calcularInventario (){
-        int valor = precio*cantidadStock;
-        System.out.println( "El producto " + nombreProducto + " Con codigo " + codigo + " tiene en stock " + cantidadStock + " y su valor es de " + valor);
+        int total = precio*cantidadStock;
+        System.out.println( "El producto " + nombreProducto + " Con codigo " + codigo + " tiene en stock " + cantidadStock + " y su valor es de " + total);
         
     }
 
