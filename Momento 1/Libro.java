@@ -20,19 +20,19 @@ public class Libro {
     public void devolver (){
         if (!disponible){
             disponible = true;
-            System.out.println("Has devuelto" + titulo + " Gracias! ");
+            System.out.println("Has devuelto " + titulo + " Gracias! ");
         }else {
-            System.out.println("Libro ya estaba en biblioteca");
+            System.out.println("Libro ya estaba en biblioteca ");
         }
     }
 
     //metodo para verificar disponibilidad
-    public void estaDisponible(){
-        if(disponible){
-            System.out.println(" El libro " + titulo + " esta disponible ");
-        }else{
-            System.out.println(" El libro " + titulo + " no esta disponible ");
+    public void mostrarInfo(){
+            String estado = disponible ? "Disponible " : "Prestado ";
+            System.out.println("[" + estado +"] " + titulo + " - Autor " + autor + "-ISBN: " + ISBN + "-Paginas: " + numeroPaginas );
+        
+            
         }
     }
     
-}
+

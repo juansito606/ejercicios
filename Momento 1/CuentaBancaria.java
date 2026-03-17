@@ -9,17 +9,19 @@ public class CuentaBancaria {
     public void depositar (double cantidad){
         if (cantidad > 0){
             saldo += cantidad;
-            System.out.println("Deposito aprobado. Nuevo saldo: $" + saldo);
+            System.out.println("Estimado " + titular + ", se ha depositado $ " + cantidad + "en su numero de cuenta " + numeroCuenta + ".");
+            System.out.println("Saldo actual: $" + saldo);
         }
     }
 
     //metodo para retirar
     public void retirar (double cantidad){
         if(cantidad >0 && cantidad <= saldo){
-            saldo -= cantidad;
-            System.out.println("Retiro exitoso. Saldo Restante: $" + saldo);
+            saldo -= cantidad; 
+            System.out.println("Estimado " + titular + ", se ha retirado $ " + cantidad + "en su numero de cuenta " + numeroCuenta + ".");
+            System.out.println("Saldo restante: $ " + saldo);
         }else{
-            System.out.println("No hay dinero suficiente para retirar");
+            System.out.println("Lo sentimos " + titular + ", no hay dinero suficiente. ");
         }
     }         
           //metodo para consultar saldo
