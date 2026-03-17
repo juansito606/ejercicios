@@ -3,7 +3,7 @@ public class Libro {
     String autor;
     String ISBN;
     int numeroPaginas;
-    boolean disponible;
+    boolean disponible = true; //Por defecto se crea disponible
 
     // metodo para prestar
 
@@ -18,8 +18,12 @@ public class Libro {
 
     // metodo para devolver
     public void devolver (){
-        disponible = true;
-        System.out.println(" El libro " + titulo + " fue devuelto ");
+        if (!disponible){
+            disponible = true;
+            System.out.println("Has devuelto" + titulo + " Gracias! ");
+        }else {
+            System.out.println("Libro ya estaba en biblioteca");
+        }
     }
 
     //metodo para verificar disponibilidad

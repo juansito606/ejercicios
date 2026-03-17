@@ -1,30 +1,53 @@
+import java.util.Scanner;
+
 public class Libromain {
     
-    public static void main(String[] args) {
-        Libro libro1 = new Libro();
-        Libro libro2 = new Libro();
+    public static void main(String[] args){
+        Scanner sc = new Scanner (System.in);
+        Libro miLibro= new Libro();
 
-        libro1.titulo= "Don quijote";
-        libro1.autor = "Cervantes";
-        libro1.ISBN = "111";
-        libro1.numeroPaginas = 500;
-        libro1.disponible = true;
+        //configuracion inicial
 
-        libro2.titulo = "El principito";
-        libro2.autor = "Saint Exupery";
-        libro2.ISBN = "222";
-        libro2.numeroPaginas = 120;
-        libro2.disponible = true;
+        System.out.println("---Nuevo registro de libro");
+        System.out.println("Titulo ");
+        miLibro.titulo = sc.nextLine();
+        System.out.println("Autor ");
+        miLibro.autor = sc.nextLine();
+        System.out.println("ISBN: ");
+        miLibro.ISBN = sc.nextLine();
 
-        libro1.estaDisponible();
-        libro1.prestar();
-        libro1.devolver();
-        libro1.estaDisponible();
+        int opcion;
+        do{
+            System.out.println("Sistema de biblioteca");
+            System.out.println("1. Verificar disponibilidad");
+            System.out.println("2. Prestar libro");
+            System.out.println("3. Devolver libro");
+            System.out.println("4. Salir");
+            System.out.print("Elija una opción: ");
+            opcion = sc.nextInt();
 
-        
-        libro2.estaDisponible();
-        libro2.prestar();
-        libro2.devolver();
-        libro2.estaDisponible();
+            switch (opcion) {
+                case 1:
+                    miLibro.estaDisponible();
+                    break;
+                case 2:
+                    miLibro.prestar();
+                    break;
+                case 3:
+                    miLibro.devolver();
+                    break;
+                case 4:
+                    System.out.println("Cerrando sistema... ¡Buen día!");
+                    break;
+                default:
+                    System.out.println("Opcion no válida.");
+            }
+        } while (opcion != 4);
+
+        sc.close();
     }
 }
+
+        
+    
+        
