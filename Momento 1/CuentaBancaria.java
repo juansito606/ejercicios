@@ -1,4 +1,4 @@
-JUpublic class CuentaBancaria {
+public class CuentaBancaria {
     //Atributos
 
      String numeroCuenta;
